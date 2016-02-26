@@ -10,6 +10,8 @@
 #import "LoginSignupTextField.h"
 #import "CustomButton.h"
 #import "SignupViewController.h"
+#import "LoginManager.h"
+
 
 @interface LoginViewController : UIViewController
 

@@ -117,8 +117,31 @@
 {
     if (self.emailTextField.text.length >0 && self.passwordTextField.text.length>0)
     {
-        [self hideEverything:YES];
-        [self performSegueWithIdentifier:SEGUE_LOGIN_TO_HOME sender:nil];
+        
+        User *loginUser = [User new];
+        
+        loginUser.email = self.emailTextField.text;
+        loginUser.password = self.passwordTextField.text;
+        
+        LoginManager *loginManager = [LoginManager new];
+        
+        [loginManager authenticateLoginForUser:loginUser success:^(User *response, RKObjectRequestOperation *operation) {
+            
+            //login SUccess
+            
+            
+            [self hideEverything:YES];
+            [self performSegueWithIdentifier:SEGUE_LOGIN_TO_HOME sender:nil];
+            
+        } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+            
+            //login Failed
+            
+            [self showAlertWithTitle:@"Unable to login" message:@"You sure you entered correct details ?"];
+            
+        }];
+        
+        
     }
     else
     {
