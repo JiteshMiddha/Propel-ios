@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SignupViewController.h
 //  Propel
 //
 //  Created by Jitesh Middha on 2/26/16.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface SignupViewController : UIViewController
 
-
-@property NSString *str;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @end
-

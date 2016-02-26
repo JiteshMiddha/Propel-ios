@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		4FBDA6AD1C80A3EA00EA83BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6AC1C80A3EA00EA83BE /* main.m */; };
 		4FBDA6B01C80A3EA00EA83BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6AF1C80A3EA00EA83BE /* AppDelegate.m */; };
-		4FBDA6B31C80A3EA00EA83BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6B21C80A3EA00EA83BE /* ViewController.m */; };
 		4FBDA6B61C80A3EA00EA83BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBDA6B41C80A3EA00EA83BE /* Main.storyboard */; };
 		4FBDA6B91C80A3EA00EA83BE /* Propel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6B71C80A3EA00EA83BE /* Propel.xcdatamodeld */; };
 		4FBDA6BB1C80A3EA00EA83BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBDA6BA1C80A3EA00EA83BE /* Assets.xcassets */; };
 		4FBDA6BE1C80A3EA00EA83BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBDA6BC1C80A3EA00EA83BE /* LaunchScreen.storyboard */; };
 		4FBDA6C91C80A3EA00EA83BE /* PropelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6C81C80A3EA00EA83BE /* PropelTests.m */; };
 		4FBDA6D41C80A3EA00EA83BE /* PropelUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6D31C80A3EA00EA83BE /* PropelUITests.m */; };
+		4FBDA6E91C80B5D200EA83BE /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6E81C80B5D200EA83BE /* SignupViewController.m */; };
+		4FBDA6EC1C80B66D00EA83BE /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6EB1C80B66D00EA83BE /* ContainerViewController.m */; };
+		4FDCFC031C80C3590007B525 /* LoginSignupTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDCFC021C80C3590007B525 /* LoginSignupTextField.m */; };
+		4FDCFC071C80C4940007B525 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDCFC061C80C4940007B525 /* CustomButton.m */; };
+		4FDCFC0E1C80EB320007B525 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDCFC0D1C80EB320007B525 /* LoginViewController.m */; };
+		4FDCFC111C80EF000007B525 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDCFC101C80EF000007B525 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +45,6 @@
 		4FBDA6AC1C80A3EA00EA83BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4FBDA6AE1C80A3EA00EA83BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FBDA6AF1C80A3EA00EA83BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4FBDA6B11C80A3EA00EA83BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4FBDA6B21C80A3EA00EA83BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4FBDA6B51C80A3EA00EA83BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FBDA6B81C80A3EA00EA83BE /* Propel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Propel.xcdatamodel; sourceTree = "<group>"; };
 		4FBDA6BA1C80A3EA00EA83BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +56,19 @@
 		4FBDA6CF1C80A3EA00EA83BE /* PropelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PropelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBDA6D31C80A3EA00EA83BE /* PropelUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropelUITests.m; sourceTree = "<group>"; };
 		4FBDA6D51C80A3EA00EA83BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FBDA6E41C80B5CA00EA83BE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4FBDA6E71C80B5D200EA83BE /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		4FBDA6E81C80B5D200EA83BE /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		4FBDA6EA1C80B66D00EA83BE /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		4FBDA6EB1C80B66D00EA83BE /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		4FDCFC011C80C3590007B525 /* LoginSignupTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSignupTextField.h; sourceTree = "<group>"; };
+		4FDCFC021C80C3590007B525 /* LoginSignupTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSignupTextField.m; sourceTree = "<group>"; };
+		4FDCFC051C80C4940007B525 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		4FDCFC061C80C4940007B525 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		4FDCFC091C80D17A0007B525 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		4FDCFC0D1C80EB320007B525 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4FDCFC0F1C80EF000007B525 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		4FDCFC101C80EF000007B525 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +121,11 @@
 			children = (
 				4FBDA6AE1C80A3EA00EA83BE /* AppDelegate.h */,
 				4FBDA6AF1C80A3EA00EA83BE /* AppDelegate.m */,
-				4FBDA6B11C80A3EA00EA83BE /* ViewController.h */,
-				4FBDA6B21C80A3EA00EA83BE /* ViewController.m */,
 				4FBDA6B41C80A3EA00EA83BE /* Main.storyboard */,
+				4FDCFC121C80EFA90007B525 /* models */,
+				4FDCFC081C80D14F0007B525 /* Common */,
+				4FDCFC041C80C3610007B525 /* Custom */,
+				4FDCFC001C80C3400007B525 /* View Controllers */,
 				4FBDA6BA1C80A3EA00EA83BE /* Assets.xcassets */,
 				4FBDA6BC1C80A3EA00EA83BE /* LaunchScreen.storyboard */,
 				4FBDA6BF1C80A3EA00EA83BE /* Info.plist */,
@@ -141,6 +159,47 @@
 				4FBDA6D51C80A3EA00EA83BE /* Info.plist */,
 			);
 			path = PropelUITests;
+			sourceTree = "<group>";
+		};
+		4FDCFC001C80C3400007B525 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4FBDA6EA1C80B66D00EA83BE /* ContainerViewController.h */,
+				4FBDA6EB1C80B66D00EA83BE /* ContainerViewController.m */,
+				4FBDA6E41C80B5CA00EA83BE /* LoginViewController.h */,
+				4FDCFC0D1C80EB320007B525 /* LoginViewController.m */,
+				4FBDA6E71C80B5D200EA83BE /* SignupViewController.h */,
+				4FBDA6E81C80B5D200EA83BE /* SignupViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4FDCFC041C80C3610007B525 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				4FDCFC011C80C3590007B525 /* LoginSignupTextField.h */,
+				4FDCFC021C80C3590007B525 /* LoginSignupTextField.m */,
+				4FDCFC051C80C4940007B525 /* CustomButton.h */,
+				4FDCFC061C80C4940007B525 /* CustomButton.m */,
+			);
+			name = Custom;
+			sourceTree = "<group>";
+		};
+		4FDCFC081C80D14F0007B525 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4FDCFC091C80D17A0007B525 /* Macros.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		4FDCFC121C80EFA90007B525 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4FDCFC0F1C80EF000007B525 /* User.h */,
+				4FDCFC101C80EF000007B525 /* User.m */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,8 +332,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FBDA6B31C80A3EA00EA83BE /* ViewController.m in Sources */,
+				4FDCFC071C80C4940007B525 /* CustomButton.m in Sources */,
+				4FBDA6E91C80B5D200EA83BE /* SignupViewController.m in Sources */,
+				4FDCFC111C80EF000007B525 /* User.m in Sources */,
+				4FBDA6EC1C80B66D00EA83BE /* ContainerViewController.m in Sources */,
 				4FBDA6B91C80A3EA00EA83BE /* Propel.xcdatamodeld in Sources */,
+				4FDCFC0E1C80EB320007B525 /* LoginViewController.m in Sources */,
+				4FDCFC031C80C3590007B525 /* LoginSignupTextField.m in Sources */,
 				4FBDA6B01C80A3EA00EA83BE /* AppDelegate.m in Sources */,
 				4FBDA6AD1C80A3EA00EA83BE /* main.m in Sources */,
 			);
@@ -502,6 +566,7 @@
 				4FBDA6DA1C80A3EA00EA83BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FBDA6DB1C80A3EA00EA83BE /* Build configuration list for PBXNativeTarget "PropelTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +575,7 @@
 				4FBDA6DD1C80A3EA00EA83BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FBDA6DE1C80A3EA00EA83BE /* Build configuration list for PBXNativeTarget "PropelUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +584,7 @@
 				4FBDA6E01C80A3EA00EA83BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
