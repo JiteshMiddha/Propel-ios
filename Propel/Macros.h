@@ -19,10 +19,10 @@
 
 #pragma mark - Segues
 
-#define SEGUE_LOGIN_TO_HOME @"LoginSegue"
+#define SEGUE_CONTAINER_TO_TABS @"ContainerViewToTabViewSegue"
 #define SEGUE_LOGIN_TO_FORGOT @"LoginToForgotSegue"
 #define SEGUE_LOGIN_TO_SIGNUP @"LoginToSignupSegue"
-
+#define SEGUE_SIGNUP_TO_ABOUT @"SignupToAboutYouSegue"
 
 
 

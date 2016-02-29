@@ -8,6 +8,7 @@
 
 #import "SignupViewController.h"
 #import "SignupManager.h"
+#import "Macros.h"
 
 
 @interface SignupViewController ()
@@ -47,45 +48,52 @@
 }
 
 
+
 -(void)signupButtonPressed
 {
-    if (self.emailTextField.text.length > 0 && self.passwordTextField.text.length > 0 && self.confirmPasswordTextField.text.length > 0)
-    {
-        if ([self.passwordTextField.text isEqualToString:self.confirmPasswordTextField.text])
-        {
-            
-            User *newUser = [User new];
-            
-            newUser.email = self.emailTextField.text;
-            newUser.password = self.passwordTextField.text;
-            
-            SignupManager *signupManager = [SignupManager new];
-            
-            [signupManager signupUser:newUser success:^(User *response, RKObjectRequestOperation *operation) {
-                
-#warning todo
-                
-                
-            } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                
-                // alert
-                
-                [self showAlertWithTitle:@"Could not signin" message:@"There was some error. Please try again."];
-                
-            }];
-        }
-        else
-        {
-            // alert - Password & confirm password should be same.
-            [self showAlertWithTitle:@"Pwasswords does not match" message:@"Password & confirm password should be same."];
-        }
-    }
-    else
-    {
-        // alert - Enter all fields
-        
-        [self showAlertWithTitle:@"Incomplete data" message:@"Fill all fields"];
-    }
+#warning -
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(backToSignUp) name:@"backToSignUp" object:nil];
+    [self hideAll:YES];
+    [self performSegueWithIdentifier:SEGUE_SIGNUP_TO_ABOUT sender:nil];
+//    
+//    if (self.emailTextField.text.length > 0 && self.passwordTextField.text.length > 0 && self.confirmPasswordTextField.text.length > 0)
+//    {
+//        if ([self.passwordTextField.text isEqualToString:self.confirmPasswordTextField.text])
+//        {
+//            
+//            User *newUser = [User new];
+//            
+//            newUser.email = self.emailTextField.text;
+//            newUser.password = self.passwordTextField.text;
+//            
+//            SignupManager *signupManager = [SignupManager new];
+//            
+//            [signupManager signupUser:newUser success:^(User *response, RKObjectRequestOperation *operation) {
+//
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(backToSignUp) name:@"backToSignUp" object:nil];
+//    [self hideAll:YES];
+//                [self performSegueWithIdentifier:SEGUE_SIGNUP_TO_ABOUT sender:nil];
+//                
+//            } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+//                
+//                // alert
+//                
+//                [self showAlertWithTitle:@"Could not signin" message:@"There was some error. Please try again."];
+//                
+//            }];
+//        }
+//        else
+//        {
+//            // alert - Password & confirm password should be same.
+//            [self showAlertWithTitle:@"Pwasswords does not match" message:@"Password & confirm password should be same."];
+//        }
+//    }
+//    else
+//    {
+//        // alert - Enter all fields
+//        
+//        [self showAlertWithTitle:@"Incomplete data" message:@"Fill all fields"];
+//    }
 }
 
 
@@ -109,6 +117,22 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+
+
+-(void)hideAll:(BOOL)hide
+{
+    self.emailTextField.hidden = hide;
+    self.passwordTextField.hidden = hide;
+    self.confirmPasswordTextField.hidden = hide;
+    
+    self.signupButton.hidden = hide;
+}
+
+-(void)backToSignUp
+{
+    [self hideAll:NO];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 /*
 #pragma mark - Navigation
