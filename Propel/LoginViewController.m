@@ -42,7 +42,7 @@
 {
     self.emailTextField.hidden = hide;
     self.passwordTextField.hidden = hide;
-    self.loginButton.hidden =hide;
+    self.loginButton.hidden = hide;
     self.forgotButton.hidden = hide;
     self.seperatorLabel.hidden = hide;
     self.signupTextLabel.hidden = hide;
@@ -95,17 +95,8 @@
                                     [alertController dismissViewControllerAnimated:YES completion:nil];
                                     
                                 }];
-//    UIAlertAction* noButton = [UIAlertAction
-//                               actionWithTitle:@"Cancel"
-//                               style:UIAlertActionStyleDefault
-//                               handler:^(UIAlertAction * action)
-//                               {
-//                                   [alertController dismissViewControllerAnimated:YES completion:nil];
-//                                   
-//                               }];
     
     [alertController addAction:okButton];
-//    [alertController addAction:noButton];
     
     
     [self presentViewController:alertController animated:YES completion:nil];
@@ -115,38 +106,48 @@
 
 -(void)loginButtonPressed:(UIButton *)sender
 {
-    if (self.emailTextField.text.length >0 && self.passwordTextField.text.length>0)
-    {
-        
-        User *loginUser = [User new];
-        
-        loginUser.email = self.emailTextField.text;
-        loginUser.password = self.passwordTextField.text;
-        
-        LoginManager *loginManager = [LoginManager new];
-        
-        [loginManager authenticateLoginForUser:loginUser success:^(User *response, RKObjectRequestOperation *operation) {
-            
-            //login SUccess
-            
-            
-            [self hideEverything:YES];
-            [self performSegueWithIdentifier:SEGUE_LOGIN_TO_HOME sender:nil];
-            
-        } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-            
-            //login Failed
-            
-            [self showAlertWithTitle:@"Unable to login" message:@"You sure you entered correct details ?"];
-            
-        }];
-        
-        
-    }
-    else
-    {
-        [self showAlertWithTitle:@"Incomplete data" message:@"Please enter both email and password"];
-    }
+    [self hideEverything:YES];
+    
+    
+    [self.navigationController.parentViewController performSegueWithIdentifier:SEGUE_CONTAINER_TO_TABS sender:nil];
+    
+    
+    
+//    if (self.emailTextField.text.length >0 && self.passwordTextField.text.length>0)
+//    {
+//        
+//        User *loginUser = [User new];
+//        
+//        loginUser.email = self.emailTextField.text;
+//        loginUser.password = self.passwordTextField.text;
+//        
+//        LoginManager *loginManager = [LoginManager new];
+//        
+//        [loginManager authenticateLoginForUser:loginUser success:^(User *response, RKObjectRequestOperation *operation) {
+//            
+//            //login Success
+//            
+//            
+//            [self hideEverything:YES];
+//            
+//            
+//            [self.navigationController.parentViewController performSegueWithIdentifier:SEGUE_CONTAINER_TO_TABS sender:nil];
+////            [self performSegueWithIdentifier:SEGUE_LOGIN_TO_HOME sender:nil];
+//            
+//        } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+//            
+//            //login Failed
+//            
+//            [self showAlertWithTitle:@"Unable to login" message:@"You sure you entered correct details ?"];
+//            
+//        }];
+//        
+//        
+//    }
+//    else
+//    {
+//        [self showAlertWithTitle:@"Incomplete data" message:@"Please enter both email and password"];
+//    }
 }
 
 
